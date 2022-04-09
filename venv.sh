@@ -10,5 +10,5 @@ else
 fi
 
 serve() {
-    uvicorn app:app --host 0.0.0.0 --reload
+    uvicorn server:app --host 0.0.0.0 --reload
 }
