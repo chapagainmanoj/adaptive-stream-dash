@@ -1,0 +1,9 @@
+[
+    {
+        "oid": "8ccf75834f364ad3ac789324ce47d49c",
+        "title": "example video",
+        "prefix": "2022-04-17",
+        "og_file": "og.mp4",
+        "manifest": "og.mpd"
+    }
+]

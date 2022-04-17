@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
     <style>
       body {
         margin: 40px auto;
@@ -18,25 +19,39 @@
       h2 {
         line-height: 1.2;
       }
+      #container.div {
+        text-align: justify;
+      }
+      #container > div {
+          margin: 5px;
+          display: inline-block;
+          vertical-align: top;
+      }
     </style>
+    <script src="/static/script.js"></script>
   </head>
 
   <body>
     <h2>Video Streaming</h2>
-    <p>This video is 61MB and is being streamed instead of downloaded.</p>
-    <p>
-      Feel free to seek through the video and it only loads the part you want to
-      watch
-    </p>
-    <video id="videoPlayer" width="650" controls muted="muted" autoplay>
-      <source src="http://localhost:8000/stream/" type="video/mp4" />
-    </video>
-    <i>Big Buck Bunny</i>
-    <form action = "http://localhost:8000/uploadSource" method = "POST"
-         enctype = "multipart/form-data">
-         <input type= "text" name ="video_id"/>
-         <input type = "file" name = "file" />
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" 
+              role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div id="container"></div>  <!-- container for video player -->
+    <div>
+      
+    </div>
+    <h3>Upload Files</h3>
+    <form action = "http://localhost:8000/video/" method = "POST"
+         enctype = "multipart/form-data"
+         target="/">
+         <label>Video title</label>
+         <input type= "text" name ="name"/>
+         <input type = "file" name = "file" required accept="video/*" />
          <input type = "submit"/>
       </form>
+      <script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
   </body>
 </html>
