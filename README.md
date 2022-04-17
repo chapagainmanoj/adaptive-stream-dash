@@ -1,5 +1,8 @@
 # Video Stream
 
+This project is a demo web application for video stream with a example video. It was prepared to get basic concepts
+of streaming protocols.
+
 ## installation
 
 ### With docker
@@ -11,7 +14,7 @@ docker run -p 8000:8000 --name video_stream_server video-stream
 
 ### Without docker
 
-#### Requried Dependency:
+#### Required Dependency:
 
 - ffmpeg
 
