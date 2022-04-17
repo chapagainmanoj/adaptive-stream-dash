@@ -1,6 +1,6 @@
 # Video Stream
 
-This project is a demo web application for video stream with a example video. It was prepared to get basic concepts
+This project is a very basic demo web application for video stream with a example video. It was prepared to get basic concepts
 of streaming protocols.
 
 ## installation
