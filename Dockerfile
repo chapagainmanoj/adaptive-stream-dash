@@ -1,9 +1,10 @@
-FROM python:3.9
+FROM python:3.9-alpine3.15
 
 WORKDIR /home/code
 
-apk add --no-cache ffmpeg
-COPY ./requirements.txt /requirements.txt
+RUN apk add --no-cache ffmpeg
+
+COPY ./requirements/prod.txt /requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /requirements.txt
 
